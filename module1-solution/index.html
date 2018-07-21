@@ -17,14 +17,14 @@
                <input ng-style="lunchMenuStyle()" ng-model="lunchMenu" id="lunch-menu" type="text"
                placeholder={{msgPlaceHolder}} class="form-control" >
            </div>
-           <div ng-style="finalresultStyle()">{{finalresult}}
-           </div>
            <div class="form-group">
                <button class="btn btn-default" ng-click="checkIfTooMuch()">Check If Too Much</button>
            </div>
-           <div class="form-group message">
+           <div ng-style="finalresultStyle()" class="form-group message">
+             {{finalresult}}
              <!-- Your message can go here. -->
            </div>
+         </div>note: will treat " " as 0. so "1,2, ,3" is counted as 3.</div>
      </div>
   </body>
 </html>

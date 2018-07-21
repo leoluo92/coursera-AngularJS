@@ -12,7 +12,7 @@ function LunchCheckController( $scope ){
   $scope.finalresult="";
 
   $scope.checkIfTooMuch= function (){
-    var num = $scope.lunchMenu.split(",").length;
+    var num = $scope.lunchMenu.split(",").filter(function(el) {return el.trim().length != 0}).length;
     if ($scope.lunchMenu==""){
       $scope.finalresult= "Please enter data first";
     }
